@@ -1,0 +1,26 @@
+{
+	"folders": 
+	[
+		{
+			"path": "bin/..",
+
+		}
+	],
+	"build_systems":
+	[
+		{
+			"name": "Debug",
+			"working_dir": "${project_path}",
+			"cmd": ["g++ -std=c++17 -I include -m64 -o bin/debug/main src/*.cpp && gnome-terminal -- ./bin/debug/main"],
+			"selector": "source.c++",
+			"shell": true
+		},
+		{
+			"name": "Release",
+			"working_dir": "${project_path}",
+			"cmd": ["g++ -std=c++17 -I include -m64 -O3 -o bin/release/main src/*.cpp && gnome-terminal -- ./bin/release/main"],			
+			"selector": "source.c++",
+			"shell": true
+		}
+	]
+}
